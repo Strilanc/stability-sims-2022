@@ -1,0 +1,6 @@
+stim == 1.9.0
+sinter == 1.9.0
+matplotlib
+numpy
+pytest
+scipy
