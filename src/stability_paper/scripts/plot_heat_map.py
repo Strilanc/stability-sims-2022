@@ -23,7 +23,7 @@ def main():
         raise ValueError("Specify --save or --show")
 
     fig = plot_stability_stats_heatmap(
-        sinter.stats_from_csv_files('/usr/local/google/home/craiggidney/w/stability/out/stats2.csv'),
+        sinter.stats_from_csv_files(*args.csv),
     )
     fig.set_size_inches(16, 9)
     if args.save is not None:

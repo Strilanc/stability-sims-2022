@@ -19,7 +19,7 @@ def main():
         raise ValueError("Specify --save or --show")
 
     fig = plot_stability_stats_error_rate(
-        sinter.stats_from_csv_files('/usr/local/google/home/craiggidney/w/stability/out/stats2.csv'),
+        sinter.stats_from_csv_files(*args.csv),
     )
     fig.set_size_inches(16, 9)
     if args.save is not None:
@@ -88,3 +88,7 @@ def plot_stability_stats_error_rate(
         axs[k].legend()
 
     return fig
+
+
+if __name__ == '__main__':
+    main()
